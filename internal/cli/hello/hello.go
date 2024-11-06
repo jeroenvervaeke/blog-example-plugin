@@ -25,7 +25,7 @@ func Builder() *cobra.Command {
 		Use:   "hello",
 		Short: "The Hello World command",
 		Run: func(_ *cobra.Command, _ []string) {
-			fmt.Println("Hello World!")
+			fmt.Println("Hello World, from my first AtlasCLI plugin!")
 		},
 	}
 }

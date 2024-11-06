@@ -29,7 +29,7 @@ import (
 
 func main() {
 	exampleCmd := &cobra.Command{
-		Use:   "example",
+		Use:   "blog-example",
 		Short: "Root command of the atlas cli plugin example",
 	}
 
@@ -42,16 +42,16 @@ func main() {
 	)
 
 	completionOption := &cobra.CompletionOptions{
-		DisableDefaultCmd: true,
-		DisableNoDescFlag: true,
+		DisableDefaultCmd:   true,
+		DisableNoDescFlag:   true,
 		DisableDescriptions: true,
-		HiddenDefaultCmd: true,
+		HiddenDefaultCmd:    true,
 	}
 	rootCmd := &cobra.Command{
 		DisableFlagParsing: true,
-		DisableAutoGenTag: true,
+		DisableAutoGenTag:  true,
 		DisableSuggestions: true,
-		CompletionOptions: *completionOption,
+		CompletionOptions:  *completionOption,
 	}
 	rootCmd.AddCommand(exampleCmd)
 
